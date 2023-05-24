@@ -2,26 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: "Gennaro";
+  font-weight: 400;
+  src: url("/fonts/gennaro.ttf");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: "Break Regular";
+  font-weight: 400;
+  src: url("/fonts/breakRegular.ttf");
+}
+
+@font-face {
+  font-family: "Clash Display M";
+  font-weight: 400;
+  src: url("/fonts/ClashDisplayM.otf");
+}
+
+@font-face {
+  font-family: "Clash Display B";
+  font-weight: 400;
+  src: url("/fonts/ClashDisplayB.otf");
+}
+
+@font-face {
+  font-family: "Hermano";
+  font-weight: 400;
+  src: url("/fonts/HermanoAltoStamp.ttf");
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #111313;
+}
+
+#bg {
+  background: conic-gradient(
+    #2abdf6,
+    #078fd6,
+    #06a9cf,
+    #09c0b3,
+    #0ac7ab,
+    #2abcf6
+  );
 }
