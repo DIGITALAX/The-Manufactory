@@ -7,6 +7,7 @@ import MicroFooter from "./modules/MicroFooter";
 import About from "./modules/About";
 import Image from "next/legacy/image";
 import { INFURA_GATEWAY } from "@/lib/constants";
+import Draggable from "react-draggable";
 
 const Main: FunctionComponent = (): JSX.Element => {
   const { reelNumber, setReelNumber, reelNumbers } = useReel();
@@ -21,15 +22,17 @@ const Main: FunctionComponent = (): JSX.Element => {
           reelNumbers={reelNumbers}
         />
         <About reelNumber={reelNumber} />
-        <div className="absolute w-32 h-32 z-10">
-          <Image
-            src={`${INFURA_GATEWAY}/QmNYE15bvHhA9gQZXZnu8zf8fdcaAiXb6X64HhTZNAH98s`}
-            layout="fill"
-            objectFit="cover"
-            draggable={false}
-            priority
-          />
-        </div>
+        <Draggable enableUserSelectHack={false}>
+          <div className="absolute w-32 h-32 z-10">
+            <Image
+              src={`${INFURA_GATEWAY}/QmNYE15bvHhA9gQZXZnu8zf8fdcaAiXb6X64HhTZNAH98s`}
+              layout="fill"
+              objectFit="cover"
+              draggable={false}
+              priority
+            />
+          </div>
+        </Draggable>
       </div>
       <MicroFooter />
     </div>
