@@ -23,7 +23,7 @@ const Main: FunctionComponent = (): JSX.Element => {
         />
         <About reelNumber={reelNumber} />
         <Draggable enableUserSelectHack={false}>
-          <div className="absolute w-32 h-32 z-10">
+          <div className="absolute w-44 h-44 z-10 cursor-grab active:cursor-grabbing bottom-3 right-10">
             <Image
               src={`${INFURA_GATEWAY}/QmNYE15bvHhA9gQZXZnu8zf8fdcaAiXb6X64HhTZNAH98s`}
               layout="fill"
