@@ -19,7 +19,7 @@ const Cards: FunctionComponent<CardsProps> = ({
               className="relative flex flex-col gap-1.5 text-white font-clashM text-base w-full h-fit"
             >
               <div className="relative w-fit h-fit justify-end">{card[1]}</div>
-              <div className="relative w-80 h-[32rem] flex justify-center items-center">
+              <div className="relative w-80 h-[32rem] flex justify-center items-center bg-azul">
                 <Image
                   src={`${INFURA_GATEWAY}/${card[0]}`}
                   layout="fill"
