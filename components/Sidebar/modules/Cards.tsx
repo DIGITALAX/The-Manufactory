@@ -8,7 +8,7 @@ const Cards: FunctionComponent<CardsProps> = ({
   currentIndex,
 }): JSX.Element => {
   return (
-    <div className="relative w-full h-fit overflow-y-scroll gap-3 flex flex-col">
+    <div className="relative w-fit min-w-fit h-fit overflow-y-scroll gap-3 flex flex-col">
       {[...cards?.slice(currentIndex), ...cards?.slice(0, currentIndex)]
         ?.reverse()
         ?.reverse()

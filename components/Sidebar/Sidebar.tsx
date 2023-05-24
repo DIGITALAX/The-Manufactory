@@ -6,7 +6,7 @@ import Arrows from "./modules/Arrows";
 const Sidebar: FunctionComponent = (): JSX.Element => {
   const { cards, currentIndex, moveForward, moveBackward } = useArrows();
   return (
-    <div className="relative w-fit h-full flex flex-col items-center justify-start gap-6 p-6">
+    <div className="relative w-fit min-w-fit h-full flex flex-col items-center justify-start gap-6 p-6 overflow-x-hidden">
       <Arrows moveForward={moveForward} moveBackward={moveBackward} />
       <Cards cards={cards} currentIndex={currentIndex} />
     </div>

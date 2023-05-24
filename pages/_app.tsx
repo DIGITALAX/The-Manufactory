@@ -43,7 +43,7 @@ export default function App({ Component, pageProps }: AppProps): ReactElement {
   return (
     <WagmiConfig config={config}>
       <RainbowKitProvider chains={chains}>
-        <Component {...pageProps} />
+      {(Component as React.ElementType)} {...pageProps}
       </RainbowKitProvider>
     </WagmiConfig>
   );
