@@ -24,6 +24,7 @@ const Cards: FunctionComponent<CardsProps> = ({
                   src={`${INFURA_GATEWAY}/${card[0]}`}
                   layout="fill"
                   objectFit="cover"
+                  draggable={false}
                 />
               </div>
             </div>

@@ -20,6 +20,7 @@ const Arrows: FunctionComponent<ArrowsProps> = ({
           <Image
             src={`${INFURA_GATEWAY}/QmZD9YcRuc2QHjuuV7NPJjR4EsavuPfY45j9tZaxoSDB3r`}
             layout="fill"
+            draggable={false}
           />
         </div>
         <div
@@ -29,6 +30,7 @@ const Arrows: FunctionComponent<ArrowsProps> = ({
           <Image
             src={`${INFURA_GATEWAY}/QmRePvoxG35EfKqFYcrQhfRcP9q4v85WErj5yCgbrCtMjx`}
             layout="fill"
+            draggable={false}
           />
         </div>
       </div>

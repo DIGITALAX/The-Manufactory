@@ -7,3 +7,7 @@ export type ArrowsProps = {
   reelNumber: number;
   reelNumbers: number[];
 };
+
+export type AboutProps = {
+  reelNumber: number;
+};

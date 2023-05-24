@@ -46,3 +46,49 @@ body {
     #2abcf6
   );
 }
+
+/* Width and color */
+::-webkit-scrollbar {
+  width: 2px; /* Adjust the width as per your preference */
+  background-color: #f1f1f1; /* Set the background color */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #2abdf6; /* Set the color of the scrollbar handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #078fd6; /* Set a different color on hover if desired */
+}
+
+html {
+  scrollbar-width: 2px; /* Adjust the width as per your preference */
+}
+
+/* Color */
+html {
+  scrollbar-color: #2abdf6 #f1f1f1; /* Set the color of the scrollbar handle and track */
+}
+
+/* Handle for Firefox */
+html {
+  scrollbar-face-color: #2abdf6; /* Set the color of the scrollbar handle */
+}
+
+/* Handle on hover for Firefox */
+html {
+  scrollbar-face-color: #078fd6; /* Set a different color on hover if desired */
+}
+
+#app {
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
+  overflow: -moz-scrollbars-none; /* Hide scrollbar for older versions of Firefox */
+}
+
+#app::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
