@@ -23,11 +23,11 @@ const Reel: FunctionComponent<ReelProps> = ({ reelNumber }): JSX.Element => {
             />
           </div>
           <div
-            className="absolute w-44 h-44 z-10 bottom-30 justify-center flex items-center left-10"
+            className="absolute w-44 h-60 z-10 bottom-30 justify-center flex items-center left-10"
             id="bounce2"
           >
             <Image
-              src={`${INFURA_GATEWAY}/QmNYE15bvHhA9gQZXZnu8zf8fdcaAiXb6X64HhTZNAH98s`}
+              src={`${INFURA_GATEWAY}/QmcRHFJiy7i9x4VJUAok2m93bWNx2TTV1R6CzKYgT6PVDy`}
               layout="fill"
               objectFit="cover"
               draggable={false}

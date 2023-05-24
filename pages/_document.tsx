@@ -19,6 +19,7 @@ export default function Document() {
           content="https://themanufactory.xyz/card.png/"
         />
         <meta name="twitter:url" content="https://themanufactory.xyz/" />
+        <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="canonical" href="https://themanufactory.xyz/" />
         <link
