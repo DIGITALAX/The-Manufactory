@@ -20,7 +20,6 @@ const Main: FunctionComponent = (): JSX.Element => {
         />
         <About reelNumber={reelNumber} />
       </div>
-
       <MicroFooter />
     </div>
   );

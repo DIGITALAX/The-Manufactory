@@ -5,7 +5,7 @@ import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { configureChains, createConfig, WagmiConfig } from "wagmi";
 import { polygon } from "wagmi/chains";
 import { alchemyProvider } from "wagmi/providers/alchemy";
-import { useEffect } from "react";
+import React, { ReactElement, useEffect } from "react";
 
 const { chains, publicClient, webSocketPublicClient } = configureChains(
   [polygon],
@@ -28,7 +28,7 @@ const config = createConfig({
   connectors,
 });
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }: AppProps): ReactElement {
   useEffect(() => {
     console.log(`
 ───────────╔╗╔╗──────────────────╔═╗─────╔╗
