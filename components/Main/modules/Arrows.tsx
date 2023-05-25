@@ -13,7 +13,7 @@ const Arrows: FunctionComponent<ArrowsProps> = ({
       <div
         className="relative w-5 h-8 rotate-180 cursor-pointer active:scale-95 inline-block justify-center items-center"
         onClick={() =>
-          setReelNumber(reelNumber > 0 ? reelNumber - 1 : reelNumbers.length)
+          setReelNumber(reelNumber > 0 ? reelNumber - 1 : reelNumbers.length -1)
         }
       >
         <Image
@@ -26,7 +26,7 @@ const Arrows: FunctionComponent<ArrowsProps> = ({
       <div
         className="relative w-5 h-8 cursor-pointer active:scale-95 inline-block justify-center items-center"
         onClick={() =>
-          setReelNumber(reelNumber < reelNumbers.length ? reelNumber + 1 : 0)
+          setReelNumber(reelNumber < reelNumbers.length -1 ? reelNumber + 1 : 0)
         }
       >
         <Image
