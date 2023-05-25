@@ -15,13 +15,13 @@ const About: FunctionComponent = (): JSX.Element => {
           <br />
           The Manufactory is a no-nonsense operational hub that puts the power
           of autonomous markets back into the hands of independent creators.
-          Why? Because we're tired of inaccessible tools and arbitrary
+          Why? Because we&apos;re tired of inaccessible tools and arbitrary
           gatekeeping by centralized platforms.
           <br />
           <br />
-          We’ve also had enough of the glamourized hype around AI and web3 tech.
-          Here, these aren't the buzzwords of an influencer side-hustle. Yes,
-          they're revolutionary, but it’s because they’re reliable tools of
+          We&apos;ve also had enough of the glamourized hype around AI and web3 tech.
+          Here, these aren&apos;t the buzzwords of an influencer side-hustle. Yes,
+          they&apos;re revolutionary, but it&apos;s because they&apos;re reliable tools of
           trade.
         </div>
       </div>
@@ -39,8 +39,8 @@ const About: FunctionComponent = (): JSX.Element => {
           >
             the heart of the city
           </a>
-          , The Manufactory is also accessible and operational virtually. It’s
-          an affirmation that you don’t need to be physically present to make a
+          , The Manufactory is also accessible and operational virtually. It&apos;s
+          an affirmation that you don&apos;t need to be physically present to make a
           statement, create fulfilling work remotely, or to become a member of
           something bigger. The Manufactory extends its invitation to create, to
           contribute, to trade, regardless of where you are.
@@ -53,9 +53,9 @@ const About: FunctionComponent = (): JSX.Element => {
         <div className="relative w-fit h-fit justify-start font-clashM text-base">
           There is a more radical statement to be made about the freedom to
           imagine, and to make personal autonomy more real through creative
-          trade, that emerges from the work. About how it's printable, wearable,
+          trade, that emerges from the work. About how it&apos;s printable, wearable,
           to be shown on streets, in games, at trading desks, and on content
-          streams everywhere. But we’ll let you get to know us first, before we
+          streams everywhere. But we&apos;ll let you get to know us first, before we
           crack open the good stuff.
         </div>
       </div>
