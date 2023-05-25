@@ -56,7 +56,7 @@ export default function Document() {
         />
         <link
           rel="preload"
-          href="/fonts/HermanoAltoStamp.otf"
+          href="/fonts/HermanoAltoStamp.ttf"
           as="font"
           crossOrigin="anonymous"
           type="font/ttf"
