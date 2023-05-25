@@ -6,7 +6,7 @@ const MicroFooter: FunctionComponent = (): JSX.Element => {
   return (
     <div className="relative w-full h-60 flex flex-col items-start justify-start bottom-0 px-4">
       <div className="w-full h-full flex flex-row gap-2">
-        <div className="relative w-14 h-20 flex rotate-180">
+        <div className="relative w-8 h-12 sm:w-14 sm:h-20 flex rotate-180">
           <Image
             src={`${INFURA_GATEWAY}/QmSxXPREjpTfwygwvhWB5WJusGarig5XzDVp7hRQbjeSwT`}
             layout="fill"
@@ -15,7 +15,7 @@ const MicroFooter: FunctionComponent = (): JSX.Element => {
             draggable={false}
           />
         </div>
-        <div className="relative w-14 h-20 flex rotate-180">
+        <div className="relative w-8 h-12 sm:w-14 sm:h-20 flex rotate-180">
           <Image
             src={`${INFURA_GATEWAY}/QmSxXPREjpTfwygwvhWB5WJusGarig5XzDVp7hRQbjeSwT`}
             layout="fill"
@@ -24,7 +24,7 @@ const MicroFooter: FunctionComponent = (): JSX.Element => {
             draggable={false}
           />
         </div>
-        <div className="relative w-14 h-20 flex rotate-180">
+        <div className="relative w-8 h-12 sm:w-14 sm:h-20 flex rotate-180">
           <Image
             src={`${INFURA_GATEWAY}/QmSxXPREjpTfwygwvhWB5WJusGarig5XzDVp7hRQbjeSwT`}
             layout="fill"

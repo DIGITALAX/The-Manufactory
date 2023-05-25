@@ -8,7 +8,6 @@ const Arrows: FunctionComponent<ArrowsProps> = ({
   reelNumbers,
   setReelNumber,
 }): JSX.Element => {
-  console.log({ reelNumber });
   return (
     <div className="relative w-full h-fit flex flex-row gap-14 justify-center items-center text-center">
       <div

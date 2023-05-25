@@ -24,7 +24,7 @@ const Main: FunctionComponent = (): JSX.Element => {
   const dispatch = useDispatch();
   return (
     <div className="flex flex-col h-full w-full">
-      <div className="flex flex-col items-center justify-start p-10 gap-6 flex-grow">
+      <div className="flex flex-col items-center justify-start p-4 sm:p-10 gap-6 flex-grow">
         <Title />
         <div className="flex flex-col gap-12 items-center justify-start flex-grow">
           <Reel reelNumber={reelNumber} />
@@ -44,7 +44,7 @@ const Main: FunctionComponent = (): JSX.Element => {
               dispatch={dispatch}
             />
             <Draggable enableUserSelectHack={false}>
-              <div className="absolute bottom-28 right-32 z-10 w-48 h-48 cursor-grab active:cursor-grabbing">
+              <div className="absolute antes:bottom-5 xl:bottom-28 right-20 sm:right-44 antes:right-32 z-10 h-24 w-24 sm:w-36 sm:h-36 antes:w-48 antes:h-48 cursor-grab active:cursor-grabbing">
                 <Image
                   src={`${INFURA_GATEWAY}/QmPrSncWAC4nHqhj96QtPxUE9xUMyNxxKtFJAbCj5eVjXy`}
                   layout="fill"
@@ -57,7 +57,9 @@ const Main: FunctionComponent = (): JSX.Element => {
           </div>
         </div>
       </div>
-      <MicroFooter />
+      <div className="relative w-full h-fit hidden antes:flex">
+        <MicroFooter />
+      </div>
     </div>
   );
 };

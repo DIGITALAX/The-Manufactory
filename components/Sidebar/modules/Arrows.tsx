@@ -9,8 +9,8 @@ const Arrows: FunctionComponent<ArrowsProps> = ({
 }): JSX.Element => {
   return (
     <div className="relative w-full h-fit flex flex-row font-clashB text-white justify-start items-center">
-      <div className="relative justify-start w-full h-fit uppercase">
-        TITLE TEXT HERE
+      <div className="relative justify-start w-full h-fit uppercase antes:text-base text-lg">
+        MANUFACTURING AUTONOMY
       </div>
       <div className="relative flex flex-row w-full h-fit items-center justify-end gap-3">
         <div

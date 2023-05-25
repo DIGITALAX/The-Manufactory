@@ -19,3 +19,18 @@ export type AboutProps = {
   claimed: boolean;
   dispatch: Dispatch<AnyAction>;
 };
+
+export type MintProps = {
+  image: string;
+};
+
+export type TextProps = {
+  message: string;
+  mint?: boolean;
+  handleConnect?: () => void;
+  handleMint?: () => Promise<void>;
+  connected?: boolean;
+  mintLoading?: boolean;
+  claimed?: boolean;
+  dispatch?: Dispatch<AnyAction>;
+};

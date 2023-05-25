@@ -21,6 +21,13 @@ module.exports = {
       width: {
         100: "40rem",
       },
+      screens: {
+        tablet: "910px",
+        casi: "1345px",
+        antes: "1080px",
+        preG: "480px",
+        xss: "300px",
+      },
     },
   },
   plugins: [],
