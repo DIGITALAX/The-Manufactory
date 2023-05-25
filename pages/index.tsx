@@ -1,11 +1,12 @@
 import Main from "@/components/Main/Main";
+import Modals from "@/components/Modals/Modals";
 import Sidebar from "@/components/Sidebar/Sidebar";
 import Head from "next/head";
 
 export default function Home() {
   return (
     <div
-      className="relative w-full h-[100rem] flex flex-row overflow-x-hidden selection:bg-azul selection:text-offBlack items-start justify-center"
+      className="relative w-full h-[110rem] flex flex-row overflow-x-hidden selection:bg-azul selection:text-offBlack items-start justify-center"
       id="app"
     >
       <Head>
@@ -22,6 +23,7 @@ export default function Home() {
       <Main />
       <div className="relative w-2 h-full" id="bg"></div>
       <Sidebar />
+      <Modals />
     </div>
   );
 }

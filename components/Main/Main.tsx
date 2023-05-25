@@ -10,7 +10,17 @@ import { INFURA_GATEWAY } from "@/lib/constants";
 import Draggable from "react-draggable";
 
 const Main: FunctionComponent = (): JSX.Element => {
-  const { reelNumber, setReelNumber, reelNumbers } = useReel();
+  const {
+    reelNumber,
+    setReelNumber,
+    reelNumbers,
+    handleConnect,
+    handleMint,
+    connected,
+    mintLoading,
+    claimed,
+  } = useReel();
+
   return (
     <div className="relative w-full h-fit flex flex-col items-center justify-start p-10 gap-6">
       <Title />
@@ -21,18 +31,27 @@ const Main: FunctionComponent = (): JSX.Element => {
           reelNumber={reelNumber}
           reelNumbers={reelNumbers}
         />
-        <About reelNumber={reelNumber} />
-        <Draggable enableUserSelectHack={false}>
-          <div className="absolute w-44 h-44 z-10 cursor-grab active:cursor-grabbing bottom-3 right-10">
-            <Image
-              src={`${INFURA_GATEWAY}/QmNYE15bvHhA9gQZXZnu8zf8fdcaAiXb6X64HhTZNAH98s`}
-              layout="fill"
-              objectFit="cover"
-              draggable={false}
-              priority
-            />
-          </div>
-        </Draggable>
+        <About
+          reelNumber={reelNumber}
+          connected={connected}
+          handleConnect={handleConnect}
+          handleMint={handleMint}
+          mintLoading={mintLoading}
+          claimed={claimed}
+        />
+        <div className="absolute bottom-3 right-10 z-10">
+          <Draggable enableUserSelectHack={false}>
+            <div className="relative w-48 h-48 cursor-grab active:cursor-grabbing">
+              <Image
+                src={`${INFURA_GATEWAY}/QmPrSncWAC4nHqhj96QtPxUE9xUMyNxxKtFJAbCj5eVjXy`}
+                layout="fill"
+                objectFit="cover"
+                draggable={false}
+                priority
+              />
+            </div>
+          </Draggable>
+        </div>
       </div>
       <MicroFooter />
     </div>

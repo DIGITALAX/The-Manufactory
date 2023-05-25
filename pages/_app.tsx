@@ -5,7 +5,9 @@ import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { configureChains, createConfig, WagmiConfig } from "wagmi";
 import { polygon } from "wagmi/chains";
 import { alchemyProvider } from "wagmi/providers/alchemy";
-import React, { ReactElement, useEffect } from "react";
+import React, { useEffect } from "react";
+import { Provider } from "react-redux";
+import { store } from "./../redux/store";
 
 const { chains, publicClient, webSocketPublicClient } = configureChains(
   [polygon],
@@ -41,10 +43,12 @@ export default function App({ Component, pageProps }: AppProps) {
   ╚═╝─────────────────────────────────────────────╚══╝`);
   }, []);
   return (
-    <WagmiConfig config={config}>
-      <RainbowKitProvider chains={chains}>
-        <Component {...pageProps} />
-      </RainbowKitProvider>
-    </WagmiConfig>
+    <Provider store={store}>
+      <WagmiConfig config={config}>
+        <RainbowKitProvider chains={chains}>
+          <Component {...pageProps} />
+        </RainbowKitProvider>
+      </WagmiConfig>
+    </Provider>
   );
 }
