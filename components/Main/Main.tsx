@@ -8,6 +8,7 @@ import About from "./modules/About";
 import Image from "next/legacy/image";
 import { INFURA_GATEWAY } from "@/lib/constants";
 import Draggable from "react-draggable";
+import { useDispatch } from "react-redux";
 
 const Main: FunctionComponent = (): JSX.Element => {
   const {
@@ -20,37 +21,40 @@ const Main: FunctionComponent = (): JSX.Element => {
     mintLoading,
     claimed,
   } = useReel();
-
+  const dispatch = useDispatch();
   return (
-    <div className="relative w-full h-fit flex flex-col items-center justify-start p-10 gap-6">
-      <Title />
-      <div className="relative w-full h-fit flex flex-col gap-12 items-center justify-start">
-        <Reel reelNumber={reelNumber} />
-        <Arrows
-          setReelNumber={setReelNumber}
-          reelNumber={reelNumber}
-          reelNumbers={reelNumbers}
-        />
-        <About
-          reelNumber={reelNumber}
-          connected={connected}
-          handleConnect={handleConnect}
-          handleMint={handleMint}
-          mintLoading={mintLoading}
-          claimed={claimed}
-        />
-        <div className="absolute bottom-3 right-10 z-10">
-          <Draggable enableUserSelectHack={false}>
-            <div className="relative w-48 h-48 cursor-grab active:cursor-grabbing">
-              <Image
-                src={`${INFURA_GATEWAY}/QmPrSncWAC4nHqhj96QtPxUE9xUMyNxxKtFJAbCj5eVjXy`}
-                layout="fill"
-                objectFit="cover"
-                draggable={false}
-                priority
-              />
-            </div>
-          </Draggable>
+    <div className="flex flex-col h-full w-full">
+      <div className="flex flex-col items-center justify-start p-10 gap-6 flex-grow">
+        <Title />
+        <div className="flex flex-col gap-12 items-center justify-start flex-grow">
+          <Reel reelNumber={reelNumber} />
+          <Arrows
+            setReelNumber={setReelNumber}
+            reelNumber={reelNumber}
+            reelNumbers={reelNumbers}
+          />
+          <div className="relative flex w-auto h-auto justify-center items-start">
+            <About
+              reelNumber={reelNumber}
+              connected={connected}
+              handleConnect={handleConnect}
+              handleMint={handleMint}
+              mintLoading={mintLoading}
+              claimed={claimed}
+              dispatch={dispatch}
+            />
+            <Draggable enableUserSelectHack={false}>
+              <div className="absolute bottom-28 right-32 z-10 w-48 h-48 cursor-grab active:cursor-grabbing">
+                <Image
+                  src={`${INFURA_GATEWAY}/QmPrSncWAC4nHqhj96QtPxUE9xUMyNxxKtFJAbCj5eVjXy`}
+                  layout="fill"
+                  objectFit="cover"
+                  draggable={false}
+                  priority
+                />
+              </div>
+            </Draggable>
+          </div>
         </div>
       </div>
       <MicroFooter />

@@ -15,7 +15,7 @@ const About: FunctionComponent<AboutProps> = ({
   switch (reelNumber) {
     case 1:
       return (
-        <div className="relative w-3/4 h-full text-white font-clashM text-4xl uppercase break-words min-h-[10rem]">
+        <div className="relative w-3/4 h-72 text-white font-clashM text-4xl uppercase break-words min-h-[10rem]">
           FULFILLMENT IS CLOSER THAN YOU THINK. HAVE A FREE MINT BEFORE YOU GET
           INTO CO-OP CONSIDERATION & JOIN IN.
         </div>
@@ -23,7 +23,7 @@ const About: FunctionComponent<AboutProps> = ({
 
     default:
       return (
-        <div className="w-3/4 h-full flex flex-col min-h-[10rem]">
+        <div className="w-3/4 h-72 flex flex-col min-h-[10rem]">
           <div className="relative w-full h-fit text-white font-clashM text-4xl uppercase break-words">
             FULFILLMENT IS CLOSER THAN YOU THINK. HAVE A FREE MINT BEFORE YOU
             GET INTO CO-OP CONSIDERATION & JOIN IN.
