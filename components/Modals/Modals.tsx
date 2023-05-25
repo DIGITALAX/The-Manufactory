@@ -7,7 +7,7 @@ const Modals = () => {
   const dispatch = useDispatch();
 
   return (
-    <>{!modal.open && <Mint message={modal.message} dispatch={dispatch} />}</>
+    <>{modal.open && <Mint message={modal.message} dispatch={dispatch} />}</>
   );
 };
 

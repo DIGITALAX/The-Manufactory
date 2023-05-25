@@ -11,7 +11,7 @@ const Mint: FunctionComponent<MintProps> = ({
 }): JSX.Element => {
   return (
     <div className="inset-0 justify-center fixed z-20 bg-opacity-50 backdrop-blur-sm overflow-y-hidden grid grid-flow-col auto-cols-auto w-full h-auto">
-      <div className="relative w-full lg:w-[30vw] h-fit col-start-1 place-self-center bg-offBlack rounded-lg">
+      <div className="relative w-full lg:w-[30vw] h-fit col-start-1 place-self-center bg-offBlack rounded-lg border border-white">
         <div className="relative w-full row-start-2 h-fit rounded-xl grid grid-flow-col auto-cols-auto">
           <div className="relative w-full h-full col-start-1 rounded-xl place-self-center">
             <div className="relative w-full h-full grid grid-flow-row auto-rows-auto gap-4 pb-8">
@@ -30,7 +30,7 @@ const Mint: FunctionComponent<MintProps> = ({
                 />
               </div>
               <div className="relative w-full h-fit flex flex-col items-center justify-center px-4 gap-6">
-                <div className="relative w-3/4 h-fit justify-center items-center text-white font-gen text-sm text-center">
+                <div className="relative w-3/4 h-fit justify-center items-center text-white font-gen text-5xl text-center">
                   {message}
                 </div>
                 <div
@@ -38,8 +38,8 @@ const Mint: FunctionComponent<MintProps> = ({
                   id="staticLoad"
                 >
                   <Image
-                    src={`${INFURA_GATEWAY}/ipfs/${
-                      message.includes("mint")
+                    src={`${INFURA_GATEWAY}/${
+                      message.includes("snazzy")
                         ? "QmdTWYqXn26k9A6U92eoRCu5gqv5P6Bqds9V2DekaMShC1"
                         : "QmetsZDFod8LGsuwcCTsqxaCpvgGEwa7cd2fQ2AtPjVYem"
                     }`}
