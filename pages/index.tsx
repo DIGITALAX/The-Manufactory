@@ -12,9 +12,9 @@ export default function Home() {
     >
       <Head>
         <title>The Manufactory</title>
-        <meta name="description" content="" />
+        <meta name="description" content="The Manufactory is a no-nonsense operational hub that puts the power of autonomous markets back into the hands of independent creators." />
         <link rel="icon" href="/favicon.ico" />
-        <meta property="og:site_name" content="DIGITALAX" />
+        <meta property="og:site_name" content="The Manufactory" />
         <meta
           property="og:image"
           content="https://themanufactory.xyz/card.png/"

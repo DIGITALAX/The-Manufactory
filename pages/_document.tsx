@@ -5,8 +5,8 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <meta name="og:url" content="https://themanufactory.xyz/" />
-        <meta name="og:title" content="Legend" />
-        <meta name="og:description" content="" />
+        <meta name="og:title" content="The Manufactory" />
+        <meta name="og:description" content="The Manufactory is a no-nonsense operational hub that puts the power of autonomous markets back into the hands of independent creators." />
         <meta name="og:image" content="https://themanufactory.xyz/card.png/" />
         <meta name="twitter:card" content="summary" />
         <meta name="og:url" content="https://themanufactory.xyz/" />
