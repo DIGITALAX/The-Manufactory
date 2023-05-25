@@ -9,7 +9,7 @@ const Cards: FunctionComponent<CardsProps> = ({
   currentIndex,
 }): JSX.Element => {
   return (
-    <div className="relative w-4/5 antes:w-80 xl:w-fit min-w-fit h-fit gap-10 flex flex-col items-center">
+    <div className="relative w-4/5 antes:w-80 xl:w-fit min-w-fit h-fit gap-10 flex flex-col items-center justify-start">
       {[...cards?.slice(currentIndex), ...cards?.slice(0, currentIndex)]?.map(
         (card: string[], index: number) => {
           return (
