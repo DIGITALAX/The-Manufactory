@@ -23,7 +23,10 @@ const Main: FunctionComponent = (): JSX.Element => {
   } = useReel();
   const dispatch = useDispatch();
   return (
-    <div className="flex flex-col h-full w-full">
+    <div
+      className="flex flex-col h-full antes:h-screen w-full overflow-y-scroll"
+      id="main"
+    >
       <div className="flex flex-col items-center justify-start p-4 sm:p-10 gap-6 flex-grow">
         <Title />
         <div className="flex flex-col gap-12 items-center justify-start flex-grow">
@@ -57,7 +60,7 @@ const Main: FunctionComponent = (): JSX.Element => {
           </div>
         </div>
       </div>
-      <div className="relative w-full h-fit hidden antes:flex">
+      <div className="relative w-full h-fit hidden antes:flex mt-auto bottom-0">
         <MicroFooter />
       </div>
     </div>
