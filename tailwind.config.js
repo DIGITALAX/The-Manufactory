@@ -17,6 +17,7 @@ module.exports = {
       colors: {
         offBlack: "#111313",
         azul: "#2ABDF6",
+        ama: "#FBDB86",
       },
       width: {
         100: "40rem",

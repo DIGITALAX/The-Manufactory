@@ -20,7 +20,7 @@ const Text: FunctionComponent<TextProps> = ({
       </div>
       {mint && (
         <div
-          className={`absolute w-16 sm:w-32 h-8 sm:h-12 flex justify-center items-center casi:bottom-3 right-10 ml-auto z-2 ${
+          className={`absolute w-16 sm:w-32 h-8 sm:h-12 flex justify-center items-center -bottom-4 casi:bottom-3 right-10 ml-auto z-2 ${
             !mintLoading && !claimed && "cursor-pointer active:scale-95"
           }`}
           id="glow"

@@ -2,6 +2,7 @@ import { INFURA_GATEWAY } from "@/lib/constants";
 import Image from "next/legacy/image";
 import { FunctionComponent } from "react";
 import { CardsProps } from "../types/sidebar.types";
+import About from "./About";
 
 const Cards: FunctionComponent<CardsProps> = ({
   cards,
@@ -9,9 +10,8 @@ const Cards: FunctionComponent<CardsProps> = ({
 }): JSX.Element => {
   return (
     <div className="relative w-4/5 antes:w-80 xl:w-fit min-w-fit h-full antes:h-fit overflow-y-scroll gap-10 flex flex-col items-center">
-      {[...cards?.slice(currentIndex), ...cards?.slice(0, currentIndex)]
-        
-        ?.map((card: string[], index: number) => {
+      {[...cards?.slice(currentIndex), ...cards?.slice(0, currentIndex)]?.map(
+        (card: string[], index: number) => {
           return (
             <div
               key={index}
@@ -34,7 +34,9 @@ const Cards: FunctionComponent<CardsProps> = ({
               </div>
             </div>
           );
-        })}
+        }
+      )}
+      <About />
     </div>
   );
 };

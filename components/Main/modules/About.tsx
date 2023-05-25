@@ -12,7 +12,7 @@ const About: FunctionComponent<AboutProps> = ({
   dispatch,
 }): JSX.Element => {
   switch (reelNumber) {
-    case 4:
+    case 3:
       return (
         <Text
           message={
@@ -21,7 +21,7 @@ const About: FunctionComponent<AboutProps> = ({
         />
       );
 
-    case 3:
+    case 2:
       return (
         <Text
           message={
@@ -30,8 +30,8 @@ const About: FunctionComponent<AboutProps> = ({
         />
       );
 
-    case 2:
-      return <Text message={"WHERE IT IS"} />;
+    // case 2:
+    //   return <Text message={"WHERE IT IS"} />;
 
     case 1:
       return (
