@@ -148,7 +148,7 @@ html {
   animation: anim 1s steps(2, end) infinite both;
   transform: translate3d(0, 0, 0);
   width: 100%;
-  min-width: 24rem;
+  min-width: 24rem; 
 }
 
 @keyframes anim {
