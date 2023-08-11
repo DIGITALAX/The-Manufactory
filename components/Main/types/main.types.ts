@@ -33,4 +33,5 @@ export type TextProps = {
   mintLoading?: boolean;
   claimed?: boolean;
   dispatch?: Dispatch<AnyAction>;
+  coinop?: boolean;
 };

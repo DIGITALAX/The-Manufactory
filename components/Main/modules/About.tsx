@@ -12,6 +12,16 @@ const About: FunctionComponent<AboutProps> = ({
   dispatch,
 }): JSX.Element => {
   switch (reelNumber) {
+    case 4:
+      return (
+        <Text
+          message={
+            "A VIRTUAL HEADSTART. COIN OP IS ONLINE. PREROLLS, CANVAS, QUESTS AND GPU CREDITS."
+          }
+          coinop
+        />
+      );
+
     case 3:
       return (
         <Text

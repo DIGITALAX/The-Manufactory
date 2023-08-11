@@ -8,7 +8,7 @@ import { setModal } from "@/redux/reducers/modalSlice";
 import { useDispatch } from "react-redux";
 
 const useReel = () => {
-  const reelNumbers: number[] = [0, 1, 2, 3];
+  const reelNumbers: number[] = [0, 1, 2, 3, 4];
   const [reelNumber, setReelNumber] = useState<number>(0);
   const [connected, setConnected] = useState<boolean>(false);
   const [mintLoading, setMintLoading] = useState<boolean>(false);
@@ -27,7 +27,7 @@ const useReel = () => {
         stateMutability: "nonpayable",
         type: "function",
       },
-    ],
+    ] as any,
     functionName: "mint",
     enabled: Boolean(address),
   });
