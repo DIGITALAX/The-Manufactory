@@ -4,6 +4,9 @@ import Mint from "./Mint";
 
 const Reel: FunctionComponent<ReelProps> = ({ reelNumber }): JSX.Element => {
   switch (reelNumber) {
+    case 4:
+      return <Mint image={"QmfCoKxKmrJw1fAgwqWh6a3MmJ1h8cv4jh2mQx15CrgyT5"} />;
+
     case 3:
       return <Mint image={"QmWj4j6ZmpPRMz7WZQ3dXsevATKCgE8ig7JMWecokWVR6y"} />;
 
