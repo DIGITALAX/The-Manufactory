@@ -20,7 +20,7 @@ const Text: FunctionComponent<TextProps> = ({
     <div className="w-3/4 h-52 sm:h-72 flex flex-col min-h-[10rem] justify-start items-start">
       <div
         className={`relative w-fit h-fit text-white font-clashM text-sm preG:text-base sm:text-2xl casi:text-4xl justify-start items-start flex uppercase break-words ${
-          message.includes("WHERE IT IS") && "whitespace-nowrap"
+          message?.includes("WHERE IT IS") && "whitespace-nowrap"
         }`}
       >
         {message}

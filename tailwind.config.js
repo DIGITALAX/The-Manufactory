@@ -12,7 +12,7 @@ module.exports = {
         break: "Break Regular",
         clashM: "Clash Display M",
         clashB: "Clash Display B",
-        herm: "Hermano",
+        herm: "Hermano"
       },
       fontSize: {
         xxs: "0.6rem",

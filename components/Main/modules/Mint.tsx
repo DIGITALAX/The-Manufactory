@@ -9,9 +9,9 @@ const Mint: FunctionComponent<MintProps> = ({ image }): JSX.Element => {
       <div className="absolute h-[20rem] preG:h-[30rem] sm:h-[35rem] casi:h-[45rem] border border-white left-3 top-5 w-full flex items-center justify-center"></div>
       <div
         className="relative h-[20rem] preG:h-[30rem] sm:h-[35rem] casi:h-[45rem] w-full flex items-center justify-center bg-azul"
-        id={`${image.includes("noise") ? "static" : ""}`}
+        id={`${image?.includes("noise") ? "static" : ""}`}
       >
-        {!image.includes("noise") && (
+        {!image?.includes("noise") && (
           <Image
             src={`${INFURA_GATEWAY}/${image}`}
             layout="fill"
