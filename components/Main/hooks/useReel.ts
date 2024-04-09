@@ -6,8 +6,9 @@ import { waitForTransaction } from "@wagmi/core";
 import { readContract } from "@wagmi/core";
 import { setModal } from "@/redux/reducers/modalSlice";
 import { useDispatch } from "react-redux";
+import { TFunction } from "i18next";
 
-const useReel = () => {
+const useReel = (t: TFunction<"common", undefined>) => {
   const reelNumbers: number[] = [0, 1, 2, 3, 4];
   const [reelNumber, setReelNumber] = useState<number>(0);
   const [connected, setConnected] = useState<boolean>(false);
@@ -46,7 +47,7 @@ const useReel = () => {
         dispatch(
           setModal({
             actionOpen: true,
-            actionMessage: "That's a snazzy mint, would look great as a print.",
+            actionMessage: t("limit"),
           })
         );
       }
@@ -55,7 +56,7 @@ const useReel = () => {
       dispatch(
         setModal({
           actionOpen: true,
-          actionMessage: "Uh oh. Is the copy machine on the fritz? Try again.",
+          actionMessage: t("again"),
         })
       );
       console.error(err.message);
@@ -96,7 +97,7 @@ const useReel = () => {
       dispatch(
         setModal({
           actionOpen: true,
-          actionMessage: "Uh oh. Is the copy machine on the fritz? Try again.",
+          actionMessage: t("again"),
         })
       );
       console.error(err.message);

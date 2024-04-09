@@ -1,4 +1,6 @@
 import "@/styles/globals.css";
+import "./../i18n";
+import { appWithTranslation } from "next-i18next";
 import type { AppProps } from "next/app";
 import "@rainbow-me/rainbowkit/styles.css";
 import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
@@ -31,7 +33,7 @@ const config = createConfig({
   connectors,
 });
 
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     console.log(`
   ───────────╔╗╔╗──────────────────╔═╗─────╔╗
@@ -53,3 +55,5 @@ export default function App({ Component, pageProps }: AppProps) {
     </Provider>
   );
 }
+
+export default appWithTranslation(App);

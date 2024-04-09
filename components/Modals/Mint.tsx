@@ -39,7 +39,7 @@ const Mint: FunctionComponent<MintProps> = ({
                 >
                   <Image
                     src={`${INFURA_GATEWAY}/${
-                      message.includes("snazzy")
+                      message.includes("snazzy") || message.includes("genial")
                         ? "QmdTWYqXn26k9A6U92eoRCu5gqv5P6Bqds9V2DekaMShC1"
                         : "QmetsZDFod8LGsuwcCTsqxaCpvgGEwa7cd2fQ2AtPjVYem"
                     }`}

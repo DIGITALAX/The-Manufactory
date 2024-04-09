@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const { i18n } = require("./next-i18next.config");
 
 const allowedOrigins = [
   "https://api-mumbai.lens.dev",
@@ -12,6 +13,7 @@ const nextConfig = {
     config.resolve.fallback = { fs: false, net: false, tls: false };
     return config;
   },
+  i18n,
   reactStrictMode: true,
   images: {
     remotePatterns: [

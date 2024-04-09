@@ -14,6 +14,7 @@ const Text: FunctionComponent<TextProps> = ({
   connected,
   handleMint,
   coinop,
+  t,
 }): JSX.Element => {
   return (
     <div className="w-3/4 h-52 sm:h-72 flex flex-col min-h-[10rem] justify-start items-start">
@@ -39,8 +40,7 @@ const Text: FunctionComponent<TextProps> = ({
                   dispatch(
                     setModal({
                       actionOpen: true,
-                      actionMessage:
-                        "Glad you're excited, but there's a 1 free mint per wallet limit. Pay to mint on the way.",
+                      actionMessage: t("one"),
                     })
                   )
               : !connected
@@ -56,7 +56,7 @@ const Text: FunctionComponent<TextProps> = ({
             {mintLoading ? (
               <AiOutlineLoading color="black" size={15} />
             ) : (
-              "FREE MINT"
+              t("mint")
             )}
           </div>
         </div>
@@ -79,7 +79,7 @@ const Text: FunctionComponent<TextProps> = ({
               {mintLoading ? (
                 <AiOutlineLoading color="black" size={15} />
               ) : (
-                "GO 2 COIN OP"
+                t("go")
               )}
             </div>
           </Link>

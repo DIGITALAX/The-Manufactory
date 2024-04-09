@@ -6,11 +6,12 @@ import { INFURA_GATEWAY } from "@/lib/constants";
 const Arrows: FunctionComponent<ArrowsProps> = ({
   moveBackward,
   moveForward,
+  t,
 }): JSX.Element => {
   return (
     <div className="relative w-full h-fit flex flex-row font-clashB text-white justify-start items-center">
       <div className="relative justify-start w-full h-fit uppercase antes:text-base text-lg">
-        MANUFACTURING AUTONOMY
+        {t("manu")}
       </div>
       <div className="relative flex flex-row w-full h-fit items-center justify-end gap-3">
         <div

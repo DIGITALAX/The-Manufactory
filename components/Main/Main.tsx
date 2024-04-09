@@ -9,8 +9,14 @@ import Image from "next/legacy/image";
 import { INFURA_GATEWAY } from "@/lib/constants";
 import Draggable from "react-draggable";
 import { useDispatch } from "react-redux";
+import MicroHeader from "./modules/MicroHeader";
+import { MainProps } from "./types/main.types";
 
-const Main: FunctionComponent = (): JSX.Element => {
+const Main: FunctionComponent<MainProps> = ({
+  t,
+  i18n,
+  router,
+}): JSX.Element => {
   const {
     reelNumber,
     setReelNumber,
@@ -20,15 +26,16 @@ const Main: FunctionComponent = (): JSX.Element => {
     connected,
     mintLoading,
     claimed,
-  } = useReel();
+  } = useReel(t);
   const dispatch = useDispatch();
   return (
     <div
       className="flex flex-col h-full antes:h-screen w-full overflow-y-scroll"
       id="main"
     >
+      <MicroHeader router={router} t={t} i18n={i18n} />
       <div className="flex flex-col items-center justify-start p-4 sm:p-10 gap-6 flex-grow">
-        <Title />
+        <Title t={t} />
         <div className="flex flex-col gap-12 items-center justify-start flex-grow">
           <Reel reelNumber={reelNumber} />
           <Arrows
@@ -38,6 +45,8 @@ const Main: FunctionComponent = (): JSX.Element => {
           />
           <div className="relative flex w-auto h-auto justify-center items-start">
             <About
+              t={t}
+              router={router}
               reelNumber={reelNumber}
               connected={connected}
               handleConnect={handleConnect}
@@ -61,7 +70,7 @@ const Main: FunctionComponent = (): JSX.Element => {
         </div>
       </div>
       <div className="relative w-full h-fit hidden antes:flex mt-auto bottom-0">
-        <MicroFooter />
+        <MicroFooter t={t} />
       </div>
     </div>
   );

@@ -7,11 +7,22 @@ import About from "./About";
 const Cards: FunctionComponent<CardsProps> = ({
   cards,
   currentIndex,
+  t,
+  router,
 }): JSX.Element => {
   return (
     <div className="relative w-4/5 antes:w-80 xl:w-fit min-w-fit h-fit gap-10 flex flex-col items-center justify-start">
       {[...cards?.slice(currentIndex), ...cards?.slice(0, currentIndex)]?.map(
-        (card: string[], index: number) => {
+        (
+          card: {
+            image: string;
+            title: {
+              es: string;
+              en: string;
+            };
+          },
+          index: number
+        ) => {
           return (
             <div
               key={index}
@@ -22,11 +33,11 @@ const Cards: FunctionComponent<CardsProps> = ({
                   index % 2 !== 0 ? "text-left" : "text-right"
                 }`}
               >
-                {card[1]}
+                {card.title?.[router.locale as "en" | "es"]}
               </div>
               <div className="relative w-full antes:w-60 xl:w-80 h-[20rem] preG:h-[33rem] antes:h-[20rem] xl:h-[32rem] flex justify-center items-center bg-azul">
                 <Image
-                  src={`${INFURA_GATEWAY}/${card[0]}`}
+                  src={`${INFURA_GATEWAY}/${card.image}`}
                   layout="fill"
                   objectFit="cover"
                   draggable={false}
@@ -36,7 +47,7 @@ const Cards: FunctionComponent<CardsProps> = ({
           );
         }
       )}
-      <About />
+      <About t={t} />
     </div>
   );
 };

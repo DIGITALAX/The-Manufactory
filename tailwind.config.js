@@ -14,6 +14,9 @@ module.exports = {
         clashB: "Clash Display B",
         herm: "Hermano",
       },
+      fontSize: {
+        xxs: "0.6rem",
+      },
       colors: {
         offBlack: "#111313",
         azul: "#2ABDF6",
