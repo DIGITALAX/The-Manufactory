@@ -8,8 +8,8 @@ const MicroFooter: FunctionComponent<{ t: TFunction<"common", undefined> }> = ({
   t,
 }): JSX.Element => {
   return (
-    <div className="relative w-full h-fit flex flex-row items-center justify-start bottom-0 px-4 pb-3">
-      <div className="absolute break-words left-2 flex items-center justify-center text-left text-xs font-clash text-white bottom-2">
+    <div className="relative w-full h-fit flex flex-col md:flex-row items-center justify-start bottom-0 px-4 pb-3 md:gap-0 gap-3">
+      <div className="relative md:absolute break-words left-2 flex items-center justify-center text-center md:text-left text-xs font-clash text-white bottom-2">
         {t("trad")}
       </div>
       <div className="w-full h-full flex flex-row gap-3 justify-center items-center">
