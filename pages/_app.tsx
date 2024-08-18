@@ -50,6 +50,11 @@ function App({ Component, pageProps }: AppProps) {
       <WagmiConfig config={config}>
         <RainbowKitProvider chains={chains}>
           <Component {...pageProps} />
+          <div style={{ display: "none" }}>
+            Web3, Web3 Fashion, Moda Web3, Open Source, CC0, Emma-Jane
+            MacKinnon-Lee, Open Source LLMs, DIGITALAX, F3Manifesto,
+            www.digitalax.xyz, www.f3manifesto.xyz, Women, Life, Freedom.
+          </div>
         </RainbowKitProvider>
       </WagmiConfig>
     </Provider>
