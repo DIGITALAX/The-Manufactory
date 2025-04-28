@@ -1,26 +1,234 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: "Gennaro";
+  font-weight: 400;
+  src: url("/fonts/gennaro.ttf");
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@font-face {
+  font-family: "Break Regular";
+  font-weight: 400;
+  src: url("/fonts/breakRegular.ttf");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@font-face {
+  font-family: "Clash Display M";
+  font-weight: 400;
+  src: url("/fonts/ClashDisplayM.otf");
+}
+
+@font-face {
+  font-family: "Clash Display B";
+  font-weight: 400;
+  src: url("/fonts/ClashDisplayB.otf");
+}
+
+@font-face {
+  font-family: "Hermano";
+  font-weight: 400;
+  src: url("/fonts/HermanoAltoStamp.ttf");
+}
+
+@theme {
+  --font-xxs: 0.6rem;
+
+  --font-gen: "Gennaro";
+  --font-break: "Break Regular";
+  --font-clashM: "Clash Display M";
+  --font-clashB: "Clash Display B";
+  --font-herm: "Hermano";
+
+  --color-offBlack: #111313;
+  --color-azul: #2abdf6;
+  --color-ama: #fbdb86;
+
+  --breakpoint-tablet: 910px;
+  --breakpoint-casi: 1345px;
+  --breakpoint-antes: 1080px;
+  --breakpoint-preG: 480px;
+  --breakpoint-xss: 300px;
+}
+
+@layer utilities {
+  .text-xxs {
+    font-size: var(--font-xxs);
+  }
+
+  .font-gen {
+    font-family: var(--font-gen);
+  }
+  .font-break {
+    font-family: var(--font-break);
+  }
+  .font-clashM {
+    font-family: var(--font-clashM);
+  }
+  .font-clashB {
+    font-family: var(--font-clashB);
+  }
+  .font-herm {
+    font-family: var(--font-herm);
+  }
+
+  .w-100 {
+    width: 40rem;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #111313;
+}
+
+#bg {
+  background: conic-gradient(
+    #2abdf6,
+    #078fd6,
+    #06a9cf,
+    #09c0b3,
+    #0ac7ab,
+    #2abcf6
+  );
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2abdf6;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #078fd6;
+}
+
+html {
+  scrollbar-width: 2px;
+}
+
+html {
+  scrollbar-color: #2abdf6 #f1f1f1;
+}
+
+html {
+  scrollbar-face-color: #2abdf6;
+}
+
+html {
+  scrollbar-face-color: #078fd6;
+}
+
+#app {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+
+#main {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+
+#app::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+#bounce2 {
+  animation: bounce2 4s infinite;
+}
+
+@keyframes bounce2 {
+  0%,
+  100% {
+    transform: translateY(-35%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+#glow {
+  position: relative;
+  background: conic-gradient(
+    #2abdf6,
+    #078fd6,
+    #06a9cf,
+    #09c0b3,
+    #0ac7ab,
+    #2abcf6
+  );
+  border-width: 2px;
+  border-style: solid;
+  border-image: linear-gradient(to right, #fc9cf3, #b9d9ff, #0091ff, #fd99dc) 1;
+  border-top-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+#glow::after {
+  content: " ";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.798);
+}
+
+#title {
+  -webkit-text-stroke: 1px white;
+  -moz-text-stroke: 1px white;
+  text-stroke: 1px white;
+}
+
+#static {
+  background-image: url(https://i.stack.imgur.com/uzEM4.png);
+  animation: anim 1s steps(2, end) infinite both;
+  transform: translate3d(0, 0, 0);
+  width: 100%;
+  min-width: 24rem;
+}
+
+@keyframes anim {
+  0% {
+    background-position: 0% 0%;
+  }
+  10% {
+    background-position: -25% 25%;
+  }
+  20% {
+    background-position: 30%, -25%;
+  }
+  30% {
+    background-position: -25% 25%;
+  }
+  40% {
+    background-position: 40% -50%;
+  }
+  50% {
+    background-position: 25% 70%;
+  }
+  60% {
+    background-position: 60% 80%;
+  }
+  70% {
+    background-position: 30% 50%;
+  }
+  80% {
+    background-position: 30%, -25%;
+  }
+  90% {
+    background-position: 0% 70%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
 }
