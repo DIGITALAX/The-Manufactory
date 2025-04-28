@@ -60,10 +60,13 @@ export default function RootLayout({
     <html>
       <body>
         <Providers>
-          <div className="relative w-full h-full antes:h-screen flex flex-col antes:flex-row overflow-x-hidden selection:bg-azul selection:text-offBlack items-start justify-start">
+          <div
+            className="relative w-full h-full antes:h-screen flex flex-col antes:flex-row overflow-x-hidden selection:bg-azul selection:text-offBlack items-start justify-start text-white"
+            id="app"
+          >
             {children}
+            <Modals />
           </div>
-          <Modals />
         </Providers>
       </body>
     </html>

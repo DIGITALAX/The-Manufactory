@@ -9,10 +9,10 @@ const Sidebar: FunctionComponent<{
   const { cards, currentIndex, moveForward, moveBackward } = useArrows(dict);
   return (
     <div
-      className="relative antes:sticky top-0 right-0 w-full antes:w-fit min-w-fit h-[100rem] antes:h-full flex flex-col items-center justify-start gap-6 pt-6 px-6 antes:overflow-x-hidden"
+      className="relative antes:sticky top-0 right-0 w-full antes:w-fit min-w-fit h-[100rem] antes:h-full flex flex-col items-center justify-start gap-6 pt-6 px-2 sm:px-6 antes:overflow-x-hidden"
       id="side"
     >
-      <div className="relative w-full h-fit flex flex-row font-clashB text-white justify-start items-center">
+      <div className="relative w-full h-fit sm:flex-nowrap flex-wrap flex flex-row font-clashB text-white justify-start items-center gap-3">
         <div className="relative justify-start w-full h-fit uppercase antes:text-base text-lg">
           {dict?.manu}
         </div>

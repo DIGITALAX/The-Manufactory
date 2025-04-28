@@ -1,5 +1,5 @@
 "use client";
-import { createContext, SetStateAction, useState } from "react";
+import { createContext, SetStateAction, useEffect, useState } from "react";
 import { WagmiProvider, createConfig, http } from "wagmi";
 import { ConnectKitProvider, getDefaultConfig } from "connectkit";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -36,12 +36,24 @@ export const config = createConfig(
 
 export default function Providers({ children }: { children: React.ReactNode }) {
   const [mint, setMint] = useState<string | undefined>();
+
+  useEffect(() => {
+    console.log(`
+  ───────────╔╗╔╗──────────────────╔═╗─────╔╗
+  ─╔╗───────╔╝╚╣║──────────────────║╔╝────╔╝╚╗
+  ─╚╬══╦╦═╗─╚╗╔╣╚═╦══╗╔╗╔╦══╦═╗╔╗╔╦╝╚╦══╦═╩╗╔╬══╦═╦╗─╔╗
+  ─╔╣╔╗╠╣╔╗╗─║║║╔╗║║═╣║╚╝║╔╗║╔╗╣║║╠╗╔╣╔╗║╔═╣║║╔╗║╔╣║─║║
+  ─║║╚╝║║║║║─║╚╣║║║║═╣║║║║╔╗║║║║╚╝║║║║╔╗║╚═╣╚╣╚╝║║║╚═╝║
+  ─║╠══╩╩╝╚╝─╚═╩╝╚╩══╝╚╩╩╩╝╚╩╝╚╩══╝╚╝╚╝╚╩══╩═╩══╩╝╚═╗╔╝
+  ╔╝║─────────────────────────────────────────────╔═╝║
+  ╚═╝─────────────────────────────────────────────╚══╝`);
+  }, []);
   return (
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
         <ConnectKitProvider
           customTheme={{
-            "--ck-font-family": '"Nerd Semi", cursive',
+            "--ck-font-family": '"Break Regular", cursive',
           }}
         >
           <ModalContext.Provider

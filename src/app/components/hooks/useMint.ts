@@ -36,7 +36,6 @@ const useMint = (dict: any) => {
         ],
         functionName: "mint",
         chain: chains.mainnet,
-
         account: address,
       });
 
@@ -60,16 +59,16 @@ const useMint = (dict: any) => {
         address: MANUFACTORY_WAITLIST_CONTRACT,
         abi: [
           {
-            inputs: [
-              { internalType: "address", name: "account", type: "address" },
-            ],
-            name: "balanceOf",
-            outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-            stateMutability: "view",
             type: "function",
+            name: "hasMinted",
+            inputs: [
+              { name: "_address", type: "address", internalType: "address" },
+            ],
+            outputs: [{ name: "", type: "bool", internalType: "bool" }],
+            stateMutability: "view",
           },
         ],
-        functionName: "balanceOf",
+        functionName: "hasMinted",
         args: [address!],
       });
 

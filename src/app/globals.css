@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
 
 @font-face {
   font-family: "Gennaro";
@@ -44,6 +43,7 @@
   --color-offBlack: #111313;
   --color-azul: #2abdf6;
   --color-ama: #fbdb86;
+
 
   --breakpoint-tablet: 910px;
   --breakpoint-casi: 1345px;
@@ -108,19 +108,10 @@ body {
 
 html {
   scrollbar-width: 2px;
-}
-
-html {
   scrollbar-color: #2abdf6 #f1f1f1;
-}
-
-html {
-  scrollbar-face-color: #2abdf6;
-}
-
-html {
   scrollbar-face-color: #078fd6;
 }
+
 
 #app {
   scrollbar-width: none;

@@ -53,7 +53,7 @@ const MicroHeader: FunctionComponent<{ dict: any }> = ({
               chosenLanguage !== "ar" && "cursor-pointer active:scale-95"
             }`}
           >
-            ~* {chosenLanguage == "ar" ? dict?.soon : dict?.ve} *~
+            ~* {chosenLanguage == "ar" ? dict?.pronto : dict?.ve} *~
           </div>
         </div>
         <div className="relative w-fit h-fit flex items-center justify-center">
