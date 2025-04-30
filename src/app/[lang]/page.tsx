@@ -1,6 +1,6 @@
 import { getDictionary } from "@/app/[lang]/dictionaries";
-import { tParams } from "./layout";
 import Entry from "@/app/components/modules/Entry";
+import { tParams } from "../layout";
 
 export default async function Home({ params }: { params: tParams }) {
   const { lang } = await params;

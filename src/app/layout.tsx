@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import "./../globals.css";
+import "./globals.css";
 import Providers from "@/providers";
-import Modals from "@/app/components/modules/Modals";
+import Modals from "./components/modules/Modals";
 
 export type tParams = Promise<{ lang: string }>;
+
 
 export const metadata: Metadata = {
   title: "The Manufactory",
@@ -49,12 +50,14 @@ export const metadata: Metadata = {
   ],
 };
 
+export async function generateStaticParams() {
+  return [{ lang: "en" }, { lang: "es" }];
+}
+
 export default function RootLayout({
   children,
-  params,
 }: Readonly<{
   children: React.ReactNode;
-  params: tParams;
 }>) {
   return (
     <html>

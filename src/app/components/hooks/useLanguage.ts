@@ -1,14 +1,11 @@
-import { MANUFACTORY_WAITLIST_CONTRACT } from "@/app/lib/constants";
-import { chains } from "@lens-chain/sdk/viem";
 import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
-
+import { useState } from "react";
 
 const useLanguage = () => {
   const router = useRouter();
   const path = usePathname();
   const [chosenLanguage, setChosenLanguage] = useState<string>(
-    path.match(/(?<=\/)(en|es)(?=\/)/)?.[0] as string
+    path.match(/(?<=\/)(en|es)(?=\/)/)?.[0] ?? "en"
   );
 
   const changeLanguage = (lang: string) => {
@@ -21,11 +18,11 @@ const useLanguage = () => {
     router.push(newPath);
   };
 
-
   return {
     changeLanguage,
     chosenLanguage,
-    setChosenLanguage,  };
+    setChosenLanguage,
+  };
 };
 
 export default useLanguage;

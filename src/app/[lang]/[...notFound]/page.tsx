@@ -1,6 +1,6 @@
 import NotFoundEntry from "@/app/components/modules/NotFoundEntry";
 import { getDictionary } from "../dictionaries";
-import { tParams } from "../layout";
+import { tParams } from "@/app/layout";
 
 
 export default async function NotFound({ params }: { params: tParams }) {
