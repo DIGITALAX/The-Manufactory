@@ -12,11 +12,8 @@ export async function GET() {
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
 >
-${locales
-  .map(
-    (locale) => `
-    <url>
-      <loc>${baseUrl}/${locale}</loc>
+ <url>
+      <loc>${baseUrl}</loc>
       ${locales
         .map(
           (altLocale) => `
@@ -26,10 +23,6 @@ ${locales
         .join("")}
       <xhtml:link rel="alternate" hreflang="x-default" href="${baseUrl}/en" />
     </url>
-  `
-  )
-  .join("")}
-  
 </urlset>`;
 
   return new NextResponse(body, {
