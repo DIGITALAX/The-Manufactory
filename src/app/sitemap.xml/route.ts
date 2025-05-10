@@ -17,11 +17,11 @@ export async function GET() {
       ${locales
         .map(
           (altLocale) => `
-        <xhtml:link rel="alternate" hreflang="${altLocale}" href="${baseUrl}/${altLocale}" />
+        <link rel="alternate" hreflang="${altLocale}" href="${baseUrl}/${altLocale}" ></link>
         `
         )
         .join("")}
-      <xhtml:link rel="alternate" hreflang="x-default" href="${baseUrl}/en" />
+      <link rel="alternate" hreflang="x-default" href="${baseUrl}/en" ></link>
     </url>
 </urlset>`;
 
