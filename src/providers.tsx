@@ -1,9 +1,10 @@
 "use client";
 import { createContext, SetStateAction, useEffect, useState } from "react";
 import { WagmiProvider, createConfig, http } from "wagmi";
-import { ConnectKitProvider, getDefaultConfig } from "connectkit";
+import { ConnectKitProvider } from "connectkit";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { chains } from "@lens-chain/sdk/viem";
+import { injected } from "wagmi/connectors";
 
 const queryClient = new QueryClient();
 
@@ -19,20 +20,18 @@ export async function generateStaticParams() {
   return [{ lang: "en" }, { lang: "es" }];
 }
 
-export const config = createConfig(
-  getDefaultConfig({
-    appName: "The Manufactory",
-    walletConnectProjectId: process.env
-      .NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID as string,
-    appUrl: "https://themanufactory.xyz",
-    appIcon: "https://themanufactory.xyz/favicon.ico",
-    chains: [chains.mainnet],
-    transports: {
-      [chains.mainnet.id]: http("https://rpc.lens.xyz"),
-    },
-    ssr: true,
-  })
-);
+export const config = createConfig({
+  chains: [chains.mainnet],
+  transports: {
+    [chains.mainnet.id]: http("https://rpc.lens.xyz"),
+  },
+  connectors: [
+    injected({
+      target: "metaMask",
+    }),
+  ],
+  ssr: true,
+});
 
 export default function Providers({ children }: { children: React.ReactNode }) {
   const [mint, setMint] = useState<string | undefined>();
