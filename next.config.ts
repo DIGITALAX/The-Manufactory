@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "chromadin.infura-ipfs.io",
+        hostname: "cdn.digitalax.xyz",
         pathname: "/ipfs/**",
       },
     ],
@@ -23,7 +23,7 @@ const nextConfig: NextConfig = {
   async headers() {
     let headersConfig: any[] = [];
 
-    const allowedOrigins = ["https://chromadin.infura-ipfs.io"];
+    const allowedOrigins = ["https://cdn.digitalax.xyz"];
     allowedOrigins.forEach((origin) => {
       headersConfig.push({
         source: "/(.*)",
